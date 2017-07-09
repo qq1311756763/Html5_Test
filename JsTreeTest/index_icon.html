@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jsTree test</title>
+  <!-- 2 load the theme CSS file -->
+  <link rel="stylesheet" href="js/dist/themes/default/style.min.css" />
+  <link rel="stylesheet" href="css/icon-style.css" />
+  
+    <!-- 4 include the jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <!-- 5 include the minified jstree source -->
+  <script src="js/dist/jstree.min.js"></script>
+</head>
+<body>
+  <!-- 3 setup a container element -->
+  <div id="container">
+    <!-- in this example the tree is populated from inline HTML -->
+    
+  </div>
+  <button>demo button</button>
+
+
+  <script>
+	$(function() {
+  $('#container').jstree({
+    'core' : {
+      'data' : [
+        { "text" : "河南公司", "children" : [
+            { "text" : "平东热电","children" :[
+            
+            	{"text":"#1机组"},"#1机组"
+            
+            ]},
+            { "text" : "南阳热电" ,"children" :[
+            
+            	"#1机组","#1机组"
+            
+            ]}
+          ],"icon":"img/暴风雨-1.svg"
+        }
+      ]
+    }
+  });
+});
+  </script>
+</body>
+</html>
